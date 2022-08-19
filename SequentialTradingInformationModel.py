@@ -1,4 +1,11 @@
+"""
+preliminary code which has been divided into 
+1) gloston_milgrom_base.py
+2) inactive_trader_feature.py
 
+Keeping this program only for backup.
+
+"""
 import numpy as np
 import pandas as pd
 import random
@@ -116,7 +123,8 @@ if __name__ =="__main__":
     time_lst = np.arange(0,t_max,1)
     final_DF = pd.DataFrame(np.column_stack([bid_prices,ask_prices,prices_lst,spread_lst, profits_lst,time_lst ]), columns = ["Bids", "Asks", "Prices", "Spread", "Profit", "time"])
     print(final_DF)
-    final_DF.plot(x = "time", y = ["Bids","Asks","Prices"])
+    final_DF.plot(x = "time", y = ["Bids","Asks","Prices","Profit"])
+    
     plt.show()
 
     
